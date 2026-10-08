@@ -1,4 +1,4 @@
-﻿using MassTransit;
+using MassTransit;
 
 namespace RabbitMq_Pratice
 {
@@ -25,6 +25,9 @@ namespace RabbitMq_Pratice
                 Status = "Faturado",
                 DataCriacao = msg.DataCriacao
             };
+            // Simulação de falha para testar Retry/Circuit Breaker/DLQ (descomente para testar):
+            // throw new TimeoutException("Gateway de pagamento fora do ar!");
+
 
             _dbContext.Pedidos.Add(pedido);
             await _dbContext.SaveChangesAsync();
