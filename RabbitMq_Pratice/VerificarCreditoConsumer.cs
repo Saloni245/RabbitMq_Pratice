@@ -1,4 +1,4 @@
-﻿using MassTransit;
+using MassTransit;
 
 namespace RabbitMq_Pratice
 {
@@ -8,6 +8,9 @@ namespace RabbitMq_Pratice
         {
             var request = context.Message;
             Console.WriteLine($"[Credito Service] Analisando crédito de R$ {request.Valor:F2} para o cliente {request.ClienteId}...");
+
+            // Se houvesse I/O demorado ou chamada externa, passaríamos context.CancellationToken:
+            // await _bancoService.ConsultarAsync(request.ClienteId, context.CancellationToken);
 
             if (request.Valor >= 1000m)
             {

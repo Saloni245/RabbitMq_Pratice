@@ -1,4 +1,4 @@
-# 🚀 Event-Driven Architecture (EDA) Playground (.NET 8)
+﻿# 🚀 Event-Driven Architecture (EDA) Playground (.NET 8)
 
 > Laboratório prático de alta performance focado em **Arquitetura Orientada a Eventos (EDA)**, mensageria transacional, streaming de dados e consistência eventual com **.NET 8**, **RabbitMQ**, **Apache Kafka**, **MassTransit** e **PostgreSQL**.
 
@@ -144,6 +144,6 @@ Pressione qualquer tecla no terminal para disparar o ciclo completo de mensageri
 - [x] Resiliência Avançada: Retry Policies, Dead Letter Queue (DLQ) e Circuit Breaker
 - [x] Padrão de Comunicação Assíncrona Request / Response (`IRequestClient`)
 - [x] Observabilidade de Mensageria (OpenTelemetry, Métricas Prometheus, Jaeger Tracing & Grafana)
-- [ ] Orquestração de Saga State Machine
-- [ ] Simulação de mensageria Cloud na AWS (LocalStack com Amazon SQS e SNS)
+- [x] Orquestração de Saga State Machine (MassTransit Automatonymous / State Machine)
+- [x] Simulação de mensageria Cloud na AWS (LocalStack com Amazon SQS e SNS)
 
